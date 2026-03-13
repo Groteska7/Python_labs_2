@@ -76,7 +76,6 @@ class Sersev:
         self._status = ServiceStatus.MAINTENANCE
         print(f"Сервис {self._name} переведен на тех. обслуживание.")
 
-    # --- Магические методы ---
     def __str__(self):
         return f"Сервис '{self._name}' [{self._status.value}]. Загрузка: {len(self._tasks)}/{self._max_tasks}"
 

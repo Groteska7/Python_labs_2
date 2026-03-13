@@ -67,6 +67,7 @@ def run_demo():
     # 5. Атрибут класса
     print(f"\nВерсия через класс: {Sersev.VERSION}")
     print(f"Версия через экземпляр: {s1.VERSION}")
+    print(f"Красивый вывод через f-str: {s1.__str__()}")
 
 if __name__ == "__main__":
     run_demo()

@@ -1,5 +1,5 @@
 from .model import Sersev
-from ..line_lining import line_line
+from ..lib_file import line_line
 
 def run_demo():
     print()

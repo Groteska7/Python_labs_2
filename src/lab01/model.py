@@ -80,7 +80,7 @@ class Sersev:
         return f"Сервис '{self._name}' [{self._status.value}]. Загрузка: {len(self._tasks)}/{self._max_tasks}"
 
     def __repr__(self):
-        return f"Sersev(name='{self._name}', max_tasks={self._max_tasks})"
+        return self.__str__()
 
     def __eq__(self, other):
         if not isinstance(other, Sersev):

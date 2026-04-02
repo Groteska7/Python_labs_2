@@ -1,5 +1,5 @@
 from src.lab01.model import Sersev
-
+from src.lab01.model import ServiceStatus
 class SersevList:
     def __init__(self,name:str):
         self._services=[]
@@ -53,10 +53,19 @@ class SersevList:
                 print(f"Сервис {service.name} уже добавлен")
         else:
             self._services.append(service)
+    
+    def sort_by_max_tasks(self,reverse=True):
+        self._services=sorted(self._services, key=lambda s: s._max_tasks, reverse=reverse)
+    
+    def sort_by_tasks(self,reverse=True):
+        self._services=sorted(self._services, key=lambda s: len(s._tasks), reverse=reverse)
+    
+    def get_by_par(self,par: ServiceStatus|str):
+        target_value = par.value if isinstance(par, ServiceStatus) else par
+        return [srv for srv in self._services if target_value==srv._status.value]
 
     def __iter__(self):
         return iter(self._services)
-    
     
     def __repr__(self):
         return f"SersevList(name='{self._name}', count={len(self._services)})"

@@ -42,7 +42,7 @@
 ![i6](/images/lab02/image6.png)
 ### Проверяем сортировки. `sort_by_max_tasks` и `sort_by_tasks` далее
 ![i7](/images/lab02/image7.png)
-### Проверяем `get_by_par` (данный метод получает параметр "working"|"idle"|"error"|"mainstance" и выводит сервисы в соотвецтвующем состоянии)далее <прописанная команда>=<вывод этой команды>
+### Проверяем `get_by_par` (данный метод получает параметр "working"|"idle"|"error"|"maintenance" и выводит сервисы в соотвецтвующем состоянии)далее <прописанная команда>=<вывод этой команды>
 ![i8](/images/lab02/image8.png)
 ### Тестирование `find_by_name` и `find_by_index`
 ![i9](/images/lab02/image9.png)

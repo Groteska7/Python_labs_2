@@ -1,4 +1,4 @@
-from .model import Sersev
+from .demo import Sersev
 from ..lib_file import line_line
 
 def run_demo():
@@ -52,7 +52,7 @@ def run_demo():
     s1.add_task("Backup")
     s1.add_task("Updating logs")
     print(s1)
-    print(f"текущая нагрузка: {s1.load_percentage}%")
+    print(f"текущая нагрузка: {s1.load_percentage}%") 
     print(f"Статус сервера: {s1.status}")
     s1.set_maintenance()
     print(f"Статус сервера: {s1.status}")

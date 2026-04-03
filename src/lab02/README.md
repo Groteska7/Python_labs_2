@@ -50,8 +50,3 @@
 ![i10](/images/lab02/image10.png)
 ### Попытк записать в контейнер что то кроме кземпляра класса Sersev
 ![i11](/images/lab02/image11.png)
-
-
-
-![image1](/images/lab02/img1.png)
-![image2](/images/lab02/img2.png)

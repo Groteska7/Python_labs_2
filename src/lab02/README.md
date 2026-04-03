@@ -27,5 +27,31 @@
 - `__str__` — красивый вывод коллекции
 - `__repr__` — техническое представление
 ## Демонстрация (запуск `python -m lab02.demo`)
+## тестирование
+### создаем 3 экземпляра класса Sersev и 1 экземпляр класса SersevList
+![i1](/images/lab02/image1.png)
+### добавляем в SersevList с именем S_list все экземпляры Sersev командой `S_list.add_service(<Имя сервиса>)` (добавляем по одному)
+![i2](/images/lab02/image2.png)
+### Пытаемся добавить в S_List (в котором уже содержатся сервисы из ранней проверки) сервер с "дублирующим" именем (MainServerOne) и сервер-дубликат (MainSrerverTwo)
+![i3](/images/lab02/image3.png)
+### Прописываем `print(S_list[2])` (то есть используем S_list как обычный список)
+![i4](/images/lab02/image4.png)
+### Тестируем `__len__` (прописываем команду `print(len(S_list))`)
+![i5](/images/lab02/image5.png)
+### Тестируем `__iter__` (пытаемся вывести кажды элемент S_list с помощью перебора элементов циклом for)
+![i6](/images/lab02/image6.png)
+### Проверяем сортировки. `sort_by_max_tasks` и `sort_by_tasks` далее <прописанная команда>=<вывод этой команды>
+![i7](/images/lab02/image7.png)
+### Проверяем `get_by_par` (данный метод получает параметр "working"|"idle"|"error"|"mainstance" и выводит сервисы в соотвецтвующем состоянии)далее <прописанная команда>=<вывод этой команды>
+![i8](/images/lab02/image8.png)
+### Тестирование `find_by_name` и `find_by_index`
+![i9](/images/lab02/image9.png)
+### Тестирование `remove_by_name` и `remove_by_index`
+![i10](/images/lab02/image10.png)
+### Попытк записать в контейнер что то кроме кземпляра класса Sersev
+![i11](/images/lab02/image11.png)
+
+
+
 ![image1](/images/lab02/img1.png)
 ![image2](/images/lab02/img2.png)

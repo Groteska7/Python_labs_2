@@ -26,7 +26,7 @@ def run_demo():
     S_list.add_service(Propopio)
     print(S_list.__getitem__())
     S_list.add_service(NoNoNoMrFish)
-    print(S_list.__str__())
+    # print(S_list.__str__())?\
     S_list.add_service(s2)
     print(f"print(S_list[2]) = {S_list[2]}")
     print(line_line(row="Тестирование __len__", ln=LEN, dot="="))

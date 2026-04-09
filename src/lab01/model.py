@@ -74,10 +74,10 @@ class Sersev:
     def set_maintenance(self):
         """Метод изменения состояния"""
         self._status = ServiceStatus.MAINTENANCE
-        print(f"Сервис {self._name} переведен на тех. обслуживание.")
+        print(f"Север {self._name} переведен на тех. обслуживание.")
 
     def __str__(self):
-        return f"Сервис '{self._name}' [{self._status.value}]. Загрузка: {len(self._tasks)}/{self._max_tasks}"
+        return f"Север '{self._name}' [{self._status.value}]. Загрузка: {len(self._tasks)}/{self._max_tasks}"
 
     def __repr__(self):
         return self.__str__()
@@ -87,3 +87,7 @@ class Sersev:
             return False
         # Считаем сервисы равными, если у них одинаковые имена и лимиты
         return self._name == other._name and self._max_tasks == other._max_tasks
+    
+    def info(self):
+        task_col=task_col = "\n".join(self._tasks)
+        return f"Имя: сервер {self._name}\nзадачи:\n{task_col}"

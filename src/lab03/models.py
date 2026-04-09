@@ -19,11 +19,11 @@ class ComputeServer(Sersev):
             return "задач нету, отдахаем!"
     
     def __str__(self):
-        return f"Вычислительный сервер {self._name} мощностью {self._cpu_power} задачь в секуду"
+        return f"Вычислительный сервер {self._name} [{self._status.value}] мощностью {self._cpu_power} задачь в секуду"
 
     def info(self):
         task_col = "\n".join(self._tasks)
-        return f"Имя: сервер {self._name}\nобщая мощность: {self._cpu_power}\nпронозируемое время: {self._predicted_time} c.\nзадачи:\n{task_col}"
+        return f"Имя: сервер {self._name}\nстатус: [{self._status.value}]\nобщая мощность: {self._cpu_power}\nпронозируемое время: {self._predicted_time} c.\nзадачи:\n{task_col}"
     
     # def update(self,new_power = None):
 
@@ -41,11 +41,11 @@ class StorageServer(Sersev):
         return len(self._tasks) * 4
 
     def __str__(self):
-        return f"Сервер с большой памятью и красивыми глазами ораньживого цвета {self._name} с памятью {self._all_memory} байт"
+        return f"Сервер с большой памятью и красивыми глазами ораньживого цвета {self._name} [{self._status.value}] с памятью {self._all_memory} байт"
     
     def info(self):
         task_col = "\n".join(self._tasks)
-        return f"Имя: сервер {self._name}\nобщая память: {self._all_memory}\nзаполнен на: {(self._use_memory/self._all_memory)*100}%\nзадачи:\n{task_col}"
+        return f"Имя: сервер {self._name}\nстатус: [{self._status.value}]\nобщая память: {self._all_memory}\nзаполнен на: {(self._use_memory/self._all_memory)*100}%\nзадачи:\n{task_col}"
 
 
 class ProxyServer(Sersev):
@@ -71,7 +71,7 @@ class ProxyServer(Sersev):
             return f"задача перенаправлена на {self._target_server._name}."
 
     def __str__(self):
-        return f"Плей бой, филантроп, всемизвестный прокси сервер {self._name} с задержкой {self._ping} мс"
+        return f"Плей бой, филантроп, всемизвестный прокси сервер {self._name} [{self._status.value}] с задержкой {self._ping} мс"
     
     def set_maintenance(self):
         self._target_server = None

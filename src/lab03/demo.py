@@ -24,8 +24,7 @@ def run_demo():
 
     com_s1.add_task("Thinking_Troyan")
     com_s1.add_task("Bulling")
-    com_s1.add_task("DDOS"
-                    )
+    com_s1.add_task("DDOS")
     stor_s1.add_task("Saving_Troyan")
     stor_s1.add_task("Loading_Savrs")
     stor_s1.add_task("Make_Backup")
@@ -41,6 +40,7 @@ def run_demo():
     bbs.add_service(com_s1)
     bbs.add_service(stor_s1)
     bbs.add_service(prox_s1)
+    print(line_line("проверка полиморфизма",80,"="))
     for serv in bbs:
         print(serv.info())
         print()
@@ -50,11 +50,30 @@ def run_demo():
     print()
     print(serv_1.info())
     print()
+    print(line_line("переадрисация",30,"-"))
+    print()
     prox_s1.pull_task(2)
     print(prox_s1.info())
     print()
     print(serv_1.info())
 
+    print(line_line("коллекции на вывод по типо класса (по дочернему)",80,"="))
+    print()
+    A=bbs.get_only_type(Sersev)
+    for x in A:
+        print(x)
+    print()
+    A=bbs.get_only_type(ProxyServer)
+    for x in A:
+        print(x)
+    print()
+    A=bbs.get_only_type(StorageServer)
+    for x in A:
+        print(x)
+    print()
+    A=bbs.get_only_type(ComputeServer)
+    for x in A:
+        print(x)
 
 
 if __name__ == "__main__":

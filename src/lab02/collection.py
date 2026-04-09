@@ -1,5 +1,7 @@
 from src.lab01.model import Sersev
 from src.lab01.model import ServiceStatus
+# from src.lab03.models import ComputeServer, ProxyServer, StorageServer
+
 class SersevList:
     def __init__(self,name:str):
         self._services=[]
@@ -12,6 +14,9 @@ class SersevList:
         if index==None:
             return list(self._services)
         return self._services[index]
+    
+    def get_only_type(self,type: Sersev):
+        return [obj for obj in self._services if isinstance(obj,type)]
     
     def remove_by_name(self,name: str):
         len_start=len(self._services)

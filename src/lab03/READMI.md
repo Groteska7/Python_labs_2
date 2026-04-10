@@ -33,4 +33,5 @@
 ![imj5](/images/lab03/image5.png)
 #### Теперь укажем __StorageServer__
 ![imj6](/images/lab03/image6.png)
+
 ![circle](https://i.pinimg.com/originals/c3/a9/a8/c3a9a87ed744873864ffbf67922ec014.gif)

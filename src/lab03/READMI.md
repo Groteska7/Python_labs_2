@@ -24,4 +24,11 @@
 #### До переадресации проверим серверы полиморическим методом `serv.info()` (ранее с помощью метода __Take_Target__ мы указали конечный сервер __NoobSer__)
 ![imj2](/images/lab03/image2.png)
 #### Далее используем метод класса ProxyServer `Take_Target`, после чего снова прописываем `serv.info` для каждого сервера
-![imj](/images/lab03/image3.png)
+![imj3](/images/lab03/image3.png)
+### Проверяем коллекцию и особые выводе коллекции
+#### Добавим в коллекцию экземпляры дочерних классов и выведем их
+-[imj4](/images/lab03/image4.png)
+#### Видим красивый вывод. **__str__** работает. Далее применим метод `get_only_type` и укажем __ProxyServer__
+![imj5](/images/lab03/image5.png)
+#### Теперь укажем __StorageServer__
+![imj6](/images/lab03/image6.png)

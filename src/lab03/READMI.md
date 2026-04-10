@@ -27,7 +27,7 @@
 ![imj3](/images/lab03/image3.png)
 ### Проверяем коллекцию и особые выводе коллекции
 #### Добавим в коллекцию экземпляры дочерних классов и выведем их
--[imj4](/images/lab03/image4.png)
+![imj4](/images/lab03/image4.png)
 #### Видим красивый вывод. **__str__** работает. Далее применим метод `get_only_type` и укажем __ProxyServer__
 ![imj5](/images/lab03/image5.png)
 #### Теперь укажем __StorageServer__

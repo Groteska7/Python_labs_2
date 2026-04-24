@@ -1,6 +1,10 @@
 from ..lab01.model import Sersev
 from ..lab02.collection import SersevList
+from abc import ABC, abstractmethod
 
+class ICloudSync(ABC): # ВТОРОЙ ИНТЕРФЕЙС
+    @abstractmethod
+    def sync(self): pass
 
 class ComputeServer(Sersev):
     def __init__(self, name, cpu_power = 0.5, max_tasks = 10):
@@ -54,6 +58,9 @@ class StorageServer(Sersev):
     def set_maintenance(self):
         print(f"Синхронизация файловой системы {self._name} перед обслуживанием...")
         super().set_maintenance()
+    
+    def sync(self):
+        print(f"Облачная синхронизация для {self._name} запущена...")
 
     def __str__(self):
         return f"Сервер с большой памятью и красивыми глазами ораньживого цвета {self._name} [{self._status.value}] с памятью {self._all_memory} байт"

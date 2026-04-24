@@ -13,6 +13,10 @@ class Diagnosable(ABC):
     def get_detailed_report(self) -> str:
         pass
 
+class ICloudSync(ABC): # ВТОРОЙ ИНТЕРФЕЙС
+    @abstractmethod
+    def sync(self): pass
+
 
 class ServiceStatus(Enum):
     IDLE = "idle"

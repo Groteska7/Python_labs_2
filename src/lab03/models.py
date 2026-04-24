@@ -18,6 +18,14 @@ class ComputeServer(Sersev):
         else:
             return "задач нету, отдахаем!"
     
+    def get_detailed_report(self):
+        base_info = super().get_detailed_report()
+        return f"[COMPUTE NODE]\n{base_info}\nМощность CPU: {self._cpu_power}"
+
+    def set_maintenance(self):
+        print(f"Остановка вычислений на {self._name}...")
+        super().set_maintenance()
+    
     def __str__(self):
         return f"Вычислительный сервер {self._name} [{self._status.value}] мощностью {self._cpu_power} задачь в секуду"
 
@@ -39,6 +47,13 @@ class StorageServer(Sersev):
     @property
     def _use_memory(self):
         return len(self._tasks) * 4
+
+    def get_detailed_report(self):
+        return f"[STORAGE NODE] {self._name}\nДоступно памяти: {self._all_memory} байт"
+
+    def set_maintenance(self):
+        print(f"Синхронизация файловой системы {self._name} перед обслуживанием...")
+        super().set_maintenance()
 
     def __str__(self):
         return f"Сервер с большой памятью и красивыми глазами ораньживого цвета {self._name} [{self._status.value}] с памятью {self._all_memory} байт"

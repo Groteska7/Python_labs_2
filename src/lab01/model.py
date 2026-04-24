@@ -1,4 +1,18 @@
 from enum import Enum
+from abc import ABC, abstractmethod
+
+class Manageable(ABC):
+    """управление сервером"""
+    @abstractmethod
+    def set_maintenance(self):
+        pass
+
+class Diagnosable(ABC):
+    """инфа о диагностике"""
+    @abstractmethod
+    def get_detailed_report(self) -> str:
+        pass
+
 
 class ServiceStatus(Enum):
     IDLE = "idle"
@@ -6,7 +20,7 @@ class ServiceStatus(Enum):
     ERROR = "error"
     MAINTENANCE = "maintenance"
 
-class Sersev:
+class Sersev(Manageable,Diagnosable):
     VERSION = "1.0.5"
 
     def __init__(self, name: str, max_tasks: int = 10):
@@ -72,9 +86,11 @@ class Sersev:
         self._status = ServiceStatus.IDLE
 
     def set_maintenance(self):
-        """Метод изменения состояния"""
         self._status = ServiceStatus.MAINTENANCE
-        print(f"Север {self._name} переведен на тех. обслуживание.")
+        print(f"Сервер {self._name} переведен на тех. обслуживание.")
+    
+    def get_detailed_report(self) -> str:
+        return self.info()
 
     def __str__(self):
         return f"Север '{self._name}' [{self._status.value}]. Загрузка: {len(self._tasks)}/{self._max_tasks}"

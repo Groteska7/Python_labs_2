@@ -29,11 +29,11 @@
 
 ## Демонстрация работы
 
-### TypedCollection — базовое использование\
+### TypedCollection — базовое использование
 ![i1](/images/lab06/img1.png)
-### find(), filter(), map()\
+### find(), filter(), map()
 ![i2](/images/lab06/img2.png)
-### TypedCollection[D] — протокол Displayable\
+### TypedCollection[D] — протокол Displayable
 ![i3](/images/lab06/img3.png)
-### TypedCollection[S] — протокол Scorable\
+### TypedCollection[S] — протокол Scorable
 ![i4](/images/lab06/img4.png)

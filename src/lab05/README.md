@@ -43,4 +43,4 @@
 3. lambda vs именованная функция:\
 ![i6](/images/lab05/img6.png)
 4. методы sort_by() и filter_by():\
-[i7](/images/lab05/img7.png)
+![i7](/images/lab05/img7.png)

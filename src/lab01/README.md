@@ -53,15 +53,14 @@
 
 ## Cценарии работы и примеры работы
 - __Проверка__ \
-![Image_1](images/lab01/Valid.png)
+![Image_1](/images/lab01/Valid.png)
 - __Сценарий 1__ \
-![image_2](images/lab01/break_lim.png)
+![image_2](/images/lab01/break_lim.png)
 - __сценарий 2__ \
-![image_2](images/lab01/idle.png)
+![image_3](/images/lab01/idle.png)
 - __сценарий 3__ \
-![image_2](images/lab01/maintenance.png)
+![image_4](/images/lab01/maintenance.png)
 - __setter__ \
-![image_2](images/lab01/setter.png)
+![image_5](/images/lab01/setter.png)
 - __Тестирование__ __eq__ \
-![image_2](images/lab01/testing.png)
-
+![image_6](/images/lab01/testing.png)

@@ -11,5 +11,5 @@
 <!-- ![CODE](https://i.pinimg.com/originals/7f/bc/b1/7fbcb18a0914101da8f3b2d2ed771c1f.gif) -->
 <!-- ##### Python вайб-кодер -->
 <!-- ![codic](https://i.pinimg.com/originals/11/da/d2/11dad2b7329441c75c325be4c7943e44.gif) -->
-![codic](https://i.pinimg.com/736x/4e/c5/62/4ec56262a001f599d5f470d21608f892.jpg)
+<!-- ![codic](https://i.pinimg.com/736x/4e/c5/62/4ec56262a001f599d5f470d21608f892.jpg) -->
 ![codic](https://i.pinimg.com/736x/7d/f8/a2/7df8a2d1c80a6d6572b75105042feabe.jpg)

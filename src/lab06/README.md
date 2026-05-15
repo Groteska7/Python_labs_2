@@ -37,3 +37,5 @@
 ![i3](/images/lab06/img3.png)
 ### TypedCollection[S] — протокол Scorable
 ![i4](/images/lab06/img4.png)
+
+![codic](https://i.pinimg.com/736x/4e/c5/62/4ec56262a001f599d5f470d21608f892.jpg)

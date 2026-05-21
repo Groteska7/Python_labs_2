@@ -43,57 +43,57 @@ def run_demo() -> None:
     print("\n" + line_line(row="2. find(), filter(), map()", ln=LEN, dot="-"))
 
     # find — поиск существующего
-    найденный = tc.find(lambda x: x.name == "Alpha")
-    print(f"find(имя=='Alpha'): {найденный}")
+    found_item = tc.find(lambda x: x.name == "Alpha")
+    print(f"find(имя=='Alpha'): {found_item}")
 
     # find — поиск отсутствующего
-    не_найден = tc.find(lambda x: x.name == "НеСуществует")
-    print(f"find(имя=='НеСуществует'): {не_найден}")
+    not_found = tc.find(lambda x: x.name == "НеСуществует")
+    print(f"find(имя=='НеСуществует'): {not_found}")
 
     # filter — фильтрация
-    работающие = tc.filter(lambda x: x.status == ServiceStatus.WORKING.value)
-    print(f"filter(работающие): найдено {len(работающие)} элементов")
+    working_items = tc.filter(lambda x: x.status == ServiceStatus.WORKING.value)
+    print(f"filter(работающие): найдено {len(working_items)} элементов")
 
     # map — преобразование в имена (T → str)
-    имена: list[str] = tc.map(lambda x: x.name)
-    print(f"map в имена: {имена}")
+    names: list[str] = tc.map(lambda x: x.name)
+    print(f"map в имена: {names}")
 
     # map — преобразование в загрузку (T → float)
-    загрузки: list[float] = tc.map(lambda x: x.load_percentage)
-    print(f"map в загрузку: {загрузки}")
+    loads: list[float] = tc.map(lambda x: x.load_percentage)
+    print(f"map в загрузку: {loads}")
 
     # ========== 3. TypedCollection[D] — протокол Displayable ==========
     print("\n" + line_line(row="3. TypedCollection[D] — протокол Displayable", ln=LEN, dot="-"))
 
     # Создание объектов разных типов
-    вычисл_сервер = ComputeServer("C-01", cpu_power=2.0)
-    хранилище = StorageServer("S-01", all_memory=100)
-    прокси = ProxyServer("P-01", ping=15, target_server=вычисл_сервер)
+    cs = ComputeServer("C-01", cpu_power=2.0)
+    ss = StorageServer("S-01", all_memory=100)
+    ps = ProxyServer("P-01", ping=15, target_server=cs)
 
     # Коллекция с ограничением Displayable
-    коллекция_display: TypedCollection[D] = TypedCollection[D]("Отображаемые")
-    коллекция_display.add(вычисл_сервер).add(хранилище).add(прокси)
+    display_col: TypedCollection[D] = TypedCollection[D]("Отображаемые")
+    display_col.add(cs).add(ss).add(ps)
 
     # Вызов display() для каждого
     print("TypedCollection[D] — вызов display():")
-    for элемент in коллекция_display:
-        print(f"  {элемент.display()}")
+    for item in display_col:
+        print(f"  {item.display()}")
 
     # ========== 4. TypedCollection[S] — протокол Scorable ==========
     print("\n" + line_line(row="4. TypedCollection[S] — протокол Scorable", ln=LEN, dot="-"))
 
     # Коллекция с ограничением Scorable
-    коллекция_score: TypedCollection[S] = TypedCollection[S]("Оцениваемые")
-    коллекция_score.add(вычисл_сервер).add(хранилище).add(прокси)
+    score_col: TypedCollection[S] = TypedCollection[S]("Оцениваемые")
+    score_col.add(cs).add(ss).add(ps)
 
     # Вызов score() для каждого
     print("TypedCollection[S] — вызов score():")
-    for элемент in коллекция_score:
-        print(f"  оценка = {элемент.score():.1f}")
+    for item in score_col:
+        print(f"  оценка = {item.score():.1f}")
 
     # map с преобразованием
-    все_оценки: list[float] = коллекция_score.map(lambda x: x.score())
-    print(f"Все оценки через map(): {все_оценки}")
+    all_scores: list[float] = score_col.map(lambda x: x.score())
+    print(f"Все оценки через map(): {all_scores}")
 
 
 if __name__ == "__main__":

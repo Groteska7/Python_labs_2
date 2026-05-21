@@ -1,0 +1,61 @@
+[
+  {
+    "type": "Sersev",
+    "name": "ServerAlpha",
+    "status": "idle",
+    "max_tasks": 5,
+    "tasks": []
+  },
+  {
+    "type": "StorageServer",
+    "name": "DataStore",
+    "status": "idle",
+    "max_tasks": 20,
+    "tasks": [],
+    "all_memory": 80
+  },
+  {
+    "type": "Sersev",
+    "name": "MainSrv",
+    "status": "idle",
+    "max_tasks": 8,
+    "tasks": []
+  },
+  {
+    "type": "ProxyServer",
+    "name": "trolling",
+    "status": "working",
+    "max_tasks": 10,
+    "tasks": [
+      "TrollingDefends",
+      "TrollFiltering",
+      "MemesDwontloading",
+      "AhHahahAhahaing"
+    ],
+    "ping": 9999,
+    "target_name": null
+  },
+  {
+    "type": "ProxyServer",
+    "name": "TastyProxy",
+    "status": "working",
+    "max_tasks": 45,
+    "tasks": [
+      "eating",
+      "drinking",
+      "bulling",
+      "trolling",
+      "IDKing"
+    ],
+    "ping": 12,
+    "target_name": null
+  },
+  {
+    "type": "ComputeServer",
+    "name": "MegaGigaBoss",
+    "status": "idle",
+    "max_tasks": 1,
+    "tasks": [],
+    "cpu_power": 9999.0
+  }
+]

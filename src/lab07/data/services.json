@@ -23,29 +23,12 @@
   },
   {
     "type": "ProxyServer",
-    "name": "trolling",
-    "status": "working",
-    "max_tasks": 10,
-    "tasks": [
-      "TrollingDefends",
-      "TrollFiltering",
-      "MemesDwontloading",
-      "AhHahahAhahaing"
-    ],
-    "ping": 9999,
-    "target_name": null
-  },
-  {
-    "type": "ProxyServer",
     "name": "TastyProxy",
     "status": "working",
     "max_tasks": 45,
     "tasks": [
-      "eating",
-      "drinking",
-      "bulling",
-      "trolling",
-      "IDKing"
+      "idk",
+      "nwe"
     ],
     "ping": 12,
     "target_name": null
@@ -57,5 +40,39 @@
     "max_tasks": 1,
     "tasks": [],
     "cpu_power": 9999.0
+  },
+  {
+    "type": "StorageServer",
+    "name": "ProxyServerTop",
+    "status": "idle",
+    "max_tasks": 30864,
+    "tasks": [],
+    "all_memory": 123456
+  },
+  {
+    "type": "ProxyServer",
+    "name": "SuperDuper",
+    "status": "idle",
+    "max_tasks": 12,
+    "tasks": [],
+    "ping": 4113243132131,
+    "target_name": null
+  },
+  {
+    "type": "ComputeServer",
+    "name": "NoNameServer",
+    "status": "idle",
+    "max_tasks": 9,
+    "tasks": [],
+    "cpu_power": 321.0
+  },
+  {
+    "type": "ProxyServer",
+    "name": "NoName",
+    "status": "idle",
+    "max_tasks": 321,
+    "tasks": [],
+    "ping": 90123718926412041724912421,
+    "target_name": null
   }
 ]

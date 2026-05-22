@@ -15,6 +15,7 @@ from src.lab05.strategies import (
     TaskReducer,
     DiscountStrategy
 )
+
 from src.lib_file import line_line
 
 
@@ -22,7 +23,7 @@ def run_demo():
     """Основная функция демонстрации."""
     LEN = 80
 
-    print("\n" + line_line(row="ЛАБОРАТОРНАЯ РАБОТА №5: Стратегии и функциональное программирование", ln=LEN, dot="="))
+    # print("\n" + line_line(row="ЛАБОРАТОРНАЯ РАБОТА №5: Стратегии и функциональное программирование", ln=LEN, dot="="))
 
     # Создаём тестовые сервисы
     s1 = Sersev("Alpha", max_tasks=5)

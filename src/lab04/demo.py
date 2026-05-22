@@ -76,7 +76,7 @@ if __name__ == "__main__":
     com_s1.set_maintenance()
     stor_s1.set_maintenance()
     print(f"Статус {com_s1.name}: {com_s1.status}")
-    print(f"Статус {stor_s1.name}: {stor_s1.status}")
+    print(f"Статус {stor_s1.name}: {stor_s1.status}")   
 
     # --- СКРИНШОТ №2: Работа метода интерфейса Diagnosable (Разная реализация) ---
     print("\n" + "="*20)

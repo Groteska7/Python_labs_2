@@ -399,6 +399,7 @@ def _handle_remove(app: App) -> None:
     - Пользователь мог ошибиться или передумать.
     """
     _clear_screen()
+    _handle_list(app)
     _print_header("УДАЛЕНИЕ СЕРВИСА")
     name: str = input("  Введите имя сервиса для удаления: ").strip()
     service: Sersev = app.find_by_name(name)  # может выбросить ItemNotFoundError

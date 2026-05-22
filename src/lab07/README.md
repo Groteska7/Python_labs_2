@@ -70,4 +70,7 @@ python -m src.lab07.main
 ![i10](/images/lab07/image10.png)
 ### итог
 ![i11](/images/lab07/image11.png)
+## Дополнительное задание
+[![asciinema](https://asciinema.org/a/vy56gTPLNjnUazFP.svg)](https://asciinema.org/a/vy56gTPLNjnUazFP)
+
 ![codic](https://i.programmerhumor.io/2025/06/dd2eb3427fc9b7eddf09ea0306e68b6f5fbd5563f42a6ad0e58ddfdd067ee0d0.gif)

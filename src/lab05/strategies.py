@@ -1,9 +1,3 @@
-"""Стратегии для работы с коллекцией SersevList.
-
-Содержит функции-предикаты, функции-ключи, фабрики функций
-и callable-классы-стратегии для ЛР-5.
-"""
-
 from src.lab01.model import Sersev, ServiceStatus
 
 
@@ -101,6 +95,7 @@ class DiscountStrategy:
     def __init__(self, factor: float = 0.9):
         self.factor = factor
 
+# жестко под вопросом
     def __call__(self, item: Sersev) -> Sersev:
         # Так как в модели Sersev нет поля price,
         # стратегия может использоваться для других целей

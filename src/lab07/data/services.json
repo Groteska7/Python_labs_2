@@ -61,18 +61,23 @@
   {
     "type": "ComputeServer",
     "name": "NoNameServer",
-    "status": "idle",
+    "status": "working",
     "max_tasks": 9,
-    "tasks": [],
+    "tasks": [
+      "work",
+      "make",
+      "cod",
+      "ing",
+      "ing",
+      "ong"
+    ],
     "cpu_power": 321.0
   },
   {
-    "type": "ProxyServer",
-    "name": "NoName",
+    "type": "Sersev",
+    "name": "qwertyuiopasdfghjkzxcvbn",
     "status": "idle",
-    "max_tasks": 321,
-    "tasks": [],
-    "ping": 90123718926412041724912421,
-    "target_name": null
+    "max_tasks": 123,
+    "tasks": []
   }
 ]

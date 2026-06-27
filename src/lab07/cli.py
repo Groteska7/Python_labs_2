@@ -75,7 +75,7 @@ def _print_table(services: List[Sersev]) -> None:
         n: int = max([len(x._name) for x in services])+5
     print(n)
     # Заголовок таблицы
-    header: str = f"{'#':<4} {'Имя':<n} {'Тип':<18} {'Статус':<13} {'Загрузка':<10} {'Задачи':<8}"
+    header: str = f"{'#':<4} {'Имя':<{n}} {'Тип':<18} {'Статус':<13} {'Загрузка':<10} {'Задачи':<8}"
     print()
     print(header)
     print("-" * len(header))  # разделитель
@@ -85,7 +85,7 @@ def _print_table(services: List[Sersev]) -> None:
         srv_type: str = type(s).__name__  # "ComputeServer", "Sersev" и т.д.
         load: str = f"{s.load_percentage:.1f}%"  # загрузка с одним знаком после запятой
         tasks: str = f"{len(s._tasks)}/{s.max_tasks}"  # "3/5" — текущие/максимум
-        print(f"{i:<4} {s.name:<n} {srv_type:<18} {s.status:<13} {load:<10} {tasks:<8}")
+        print(f"{i:<4} {s.name:<{n}} {srv_type:<18} {s.status:<13} {load:<10} {tasks:<8}")
 
     print("-" * len(header))
     print(f"  Всего: {len(services)}")
